@@ -24,12 +24,11 @@ export class AuctionsController {
     return this.auctionService.createAuction(createAuctionDto);
   }
 
-  @Post(':id/bid')
+  @Post('bid')
   createBid(
     @Body() createBidDto: CreateBidDto,
-    @Param(':id') auctionId: number,
   ) {
-    return this.auctionService.createBid(createBidDto, auctionId);
+    return this.auctionService.createBid(createBidDto);
   }
 
   @Get()

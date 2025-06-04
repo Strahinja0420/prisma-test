@@ -1,6 +1,7 @@
 export class CreateBidDto {
+  ammount: number;
 
-    ammount : number;
+  auctionId: number;
 
-    userId : number;
+  userId: number;
 }

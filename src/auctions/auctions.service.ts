@@ -21,12 +21,11 @@ export class AuctionsService {
         });
   }
 
-  async createBid(createBidDto: CreateBidDto, auctionId : number) {
+  async createBid(createBidDto: CreateBidDto) {
       return this.databaseService.bids.create({
         data: {
           ...createBidDto,
           bidTime: new Date(),
-          auctionId
         },
       });
     }
